@@ -22,8 +22,8 @@ jobs:
 
       - name: Build, tag, and push the image to Amazon ECR
         env:
-          ECR_REGISTRY: 820242930882.dkr.ecr.us-east-1.amazonaws.com/thefullstack
-          ECR_REPOSITORY: nginx-custom
+          ECR_REGISTRY: 820242930882.dkr.ecr.us-east-1.amazonaws.com
+          ECR_REPOSITORY: thefullstack/nginx-custom
           IMAGE_TAG: latest
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
